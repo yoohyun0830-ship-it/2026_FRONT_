@@ -17,10 +17,6 @@ function fx(){} // 함수 (코드를 미리 정의한 것) 타입
 undefined       // 정의 X 타입
 null            // 없다 뜻 타입
 
-
-// 콘솔(결과물이 표현되는 구역)에 출력
-// 콘솔에 10 출력      // 한국어 문법
-
 console.log(10) // JS 문법
 
 // 변수란?하나의 자료 저장하는 메모리(컴퓨터 저장 단위) 공간
@@ -45,19 +41,33 @@ const 이름상자3 = 300
 // 상수의 값 호출, 상수명
 이름상자3
 console.log( 이름상자3 )
+
 // 상수의 값 수정, ** 불가능 **
-
-// 생각해보기
-let point1 = 50
-let point2 = 50
-let point3 = 100
-let point4 = point1 + point2 // 50 리터럴과 50리터럴 더해서 새로운 100 리터럴 반환
-
 // 변수는 몇개? 4
 // 리터럴 몇개? 2 ( 50 100 )
 // 변수의 특징 : 저장(재사용) ,  동일한 자료를 서로 다른 곳에 저장
+
 let age = 10
 let speed = 10
 // 두 변수는 같은 리터럴10 저장하지만 서로 다른 의미 갖는 10 저장하는 변수 표현
 
+// 출력함수
+// 함수: 자주 사용되는 코드들을 정의하여 재사용/ 호출 , 내가 만든 함수 vs 남이 만든 함수
+// 1. console.log ( 출력할자료 ) : 브라우저 개발자도구[F12] CONSOLE 탭
+console.log( "안녕하세요" )
 
+// 2. alert(출력할자료) : 브라우저 알림창에 메시지 출력
+alert( "안녕하세요2" )
+
+// 3. document.querrySelector( "선택지" )
+// document( html문서 ), query( 질의 ), Selector( 선택지 ), inner( 마크업사이 )HTML
+document.querySelector( "h3" ). innerHTML = " JS에서 대입한 자료"
+
+// 입력함수
+// 1. confirm ( 출력할메시지 ) : 브라우저 [확인=true]/[취소=false] 알림창, true/false 반환
+let 결과1 = confirm()         // 입력받은 true/false  변수에 저장
+console.log( 결과1 )
+
+// 2. prompt(출력할메시지) : 브라우저 입력가능한 알림창, 입력한 자료 반환
+let 결과2 = prompt()
+console.log( 결과2 )
