@@ -1,5 +1,3 @@
-console.log("(방법2) JS시작합니다")
-
 // 한줄주석 : 코드의 설명 / 메모 하는 공간
 /*
     여러줄주석
@@ -69,6 +67,6 @@ document.querySelector( "h3" ). innerHTML = " JS에서 대입한 자료"
 let 결과1 = confirm()         // 입력받은 true/false  변수에 저장
 console.log( 결과1 )
 
-// 2. prompt(출력할메시지) : 브라우저 입력가능한 알림창, 입력한 자료 반환
+// 2. prompt( 출력할메시지 ) : 브라우저 입력가능한 알림창, 입력한 자료 반환
 let 결과2 = prompt()
 console.log( 결과2 )
