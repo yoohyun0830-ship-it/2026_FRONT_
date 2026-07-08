@@ -1,13 +1,39 @@
-let 성함 = prompt();
-let result1=prompt("성함을 입력해주세요.")
-console.log( result1 )
+// day02 practice 1번
+let 이름 = prompt( "이름을 입력해주세요." )
+let 메뉴 = prompt( "메뉴를 입력해주세요." )
+let 수량 = prompt( "수량을 입력해주세요." )
 
-let 메뉴 = prompt();
-let result2 =prompt("메뉴를 입력해주세요.")
-console.log( result2 )
+console.log(
+    `\t[주문접수]
+    이름
+    ${이름}
+    
+    메뉴
+    ${메뉴}
 
-let 수량 = prompt();
-let result3=prompt("수량을 입력해주세요.")
-console.log( result3 )
+    수량
+    ${수량}`
+    
+)
 
+// day 02 practice 2번
+let 이름 = prompt( "이름을 입력하세요." )
+let 운동종류 = prompt( "오늘 한 운동 종류를 입력하세요." )
+let 운동시간 = prompt( " 오늘 한 운동 시간(분)을 입력하세요." )
+let 칼로리 = Number(운동시간 * 7)
 
+console.log(
+    `\t[운동기록]
+    이름
+    ${이름}
+    
+    운동종류
+    ${운동종류}
+
+    운동시간(분)
+    ${운동시간}
+    
+    칼로리
+    ${칼로리}`
+    
+)
