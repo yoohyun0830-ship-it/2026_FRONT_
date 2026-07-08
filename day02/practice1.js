@@ -1,20 +1,20 @@
-// day02 practice 1번
-let 이름 = prompt( "이름을 입력해주세요." )
-let 메뉴 = prompt( "메뉴를 입력해주세요." )
-let 수량 = prompt( "수량을 입력해주세요." )
+// // day02 practice 1번
+// let 이름 = prompt( "이름을 입력해주세요." )
+// let 메뉴 = prompt( "메뉴를 입력해주세요." )
+// let 수량 = prompt( "수량을 입력해주세요." )
 
-console.log(
-    `\t[주문접수]
-    이름
-    ${이름}
+// console.log(
+//     `\t[주문접수]
+//     이름
+//     ${이름}
     
-    메뉴
-    ${메뉴}
+//     메뉴
+//     ${메뉴}
 
-    수량
-    ${수량}`
+//     수량
+//     ${수량}`
     
-)
+// )
 
 // day 02 practice 2번
 let 이름 = prompt( "이름을 입력하세요." )
