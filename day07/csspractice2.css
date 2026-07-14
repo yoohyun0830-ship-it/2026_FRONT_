@@ -1,0 +1,36 @@
+*{ @font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+    margin: 30px;
+}
+
+}
+.img1{ width: 250px;
+margin: 30px;
+}
+span{
+    color: orange;
+    
+}
+.n{ 
+    font-size: 30px;
+    padding: 5px;
+}
+.box1{  
+    width: 500px; 
+    height: 80px;
+    padding: 20px; margin: 30px;
+    color: aliceblue;
+    background-color:#356475
+   
+}
+
+.box2{  
+    width: 500px; 
+    height: 80px;
+    padding: 20px; margin: 30px;
+    color: aliceblue;
+    background-color:#356475
+}
