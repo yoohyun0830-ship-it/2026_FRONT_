@@ -1,0 +1,32 @@
+
+.box{
+   border: solid 2px gray;
+    width: 450px;
+    margin: 0 auto;
+    padding: 15px
+}
+
+.img1{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+hr{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+h2, h3{
+    margin-left: 10px;
+}
+
+.box > div{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+div>a{
+    font-weight: bold;
+    color: orange;
+}
