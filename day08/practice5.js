@@ -1,38 +1,38 @@
 /*문제 1: prompt로 제품 정보 객체 만들기
 prompt를 세 번 사용하여 사용자로부터 '제품명', '가격', '제조사'을 순서대로 입력받습니다. 
 입력받은 정보로 하나의 product 객체를 생성하고, 생성된 객체를 콘솔에 출력하시오.*/
-let 제품명 = prompt( '제품명 입력' )
-let 가격 = prompt( '가격 입력' )
-let 제조사 = prompt( '제조사 입력' )
-// 2. 객체{ 속성명 : 속성값; , 속성명 : 속성값 }
-//          vs 배열 [ 값, 값, 값 ] 여러자료들을 인덱스 구분
-let product = { 제품명 , 가격 , 제조사 } // vs{ '제품명' : 제품명 , '가격' : 가격 ,'제조사' : 제조사 }
-console.log( product )
+// let 제품명 = prompt( '제품명 입력' )
+// let 가격 = prompt( '가격 입력' )
+// let 제조사 = prompt( '제조사 입력' )
+// // 2. 객체{ 속성명 : 속성값; , 속성명 : 속성값 }
+// //          vs 배열 [ 값, 값, 값 ] 여러자료들을 인덱스 구분
+// let product = { 제품명 , 가격 , 제조사 } // vs{ '제품명' : 제품명 , '가격' : 가격 ,'제조사' : 제조사 }
+// console.log( product )
 
 /*문제 2: prompt로 회원 가입 및 아이디 중복 확인 기능 구현
 prompt를 세 번 사용하여 사용자로부터 '아이디', '비밀번호', '이름'을 순서대로 입력받습니다.
 입력받은 정보로 하나의 member 객체를 생성하고, members 배열에 저장하여 배열을 콘솔에 출력하시오.
 단] 입력받은 아이디가 이미 배열에 존재하면 '존재하는 아이디 입니다'를 출력하고 배열에 등록하지 않습니다.
 */
-const members = [
-{ id: 'user1', password: 'pass1', name: '사용자1' },{ id: 'user2', password: 'pass2', name: '사용자2' },];
-let 아이디 = prompt( ' 아이디 입력 : ')
-let 비밀번호 = prompt(' 비밀번호 입력 : ')
-let 이름 = prompt (' 이름 입력 : ')
-let member = { 'id' : 아이디 , 'password' : 비밀번호 , 'name' : 이름 } // 배열내 저장된 기존 객체들과 동일한 속성으로 구성
-// + 만일 members(배열)내 입력받은 id가 존자해면 , 주의할점 : 배열내 객체의 특정값을 조회 -> 배열내 객체를 하나씩 조회
-// + 반복문 이용하여 특정한 조건을 충족했다/안했다. 확인변수 == 스위치 변수
-let 중복체크 = false ; // false 저장하는 변수
-for( let index = 0 ; index <= members.length-1 ; index++ ){ 
-    let 객체 = members[ index ] ; // members 배열내 index번째의 객체 꺼내기
-    if( 객체.id == member.id ){ // 만약에 index번째 객체의 아이디와 입력받은 아이디와 같다면
-        console.log( '[중복] 이미 등록된 아이디입니다.' )
-        중복체크 = true // 만일 중복이면 중복체크값을 true 대입
-        break;
-    } // 주의할점 : 반복문이 끝날때 까지 모든 배열내 객체 조회, 첫번째 객체내 아이디가 같지 않더라도 뒤에 있는 객체가 같을 수 있다.
-} // for end // 반복문 종료되고
-if( 중복체크 == true){console.log('이미 사용중인 아이디 입니다.');}
-else{console.log('등록했습니다.'); members.push(member); }
+// const members = [
+// { id: 'user1', password: 'pass1', name: '사용자1' },{ id: 'user2', password: 'pass2', name: '사용자2' },];
+// let 아이디 = prompt( ' 아이디 입력 : ')
+// let 비밀번호 = prompt(' 비밀번호 입력 : ')
+// let 이름 = prompt (' 이름 입력 : ')
+// let member = { 'id' : 아이디 , 'password' : 비밀번호 , 'name' : 이름 } // 배열내 저장된 기존 객체들과 동일한 속성으로 구성
+// // + 만일 members(배열)내 입력받은 id가 존자해면 , 주의할점 : 배열내 객체의 특정값을 조회 -> 배열내 객체를 하나씩 조회
+// // + 반복문 이용하여 특정한 조건을 충족했다/안했다. 확인변수 == 스위치 변수
+// let 중복체크 = false ; // false 저장하는 변수
+// for( let index = 0 ; index <= members.length-1 ; index++ ){ 
+//     let 객체 = members[ index ] ; // members 배열내 index번째의 객체 꺼내기
+//     if( 객체.id == member.id ){ // 만약에 index번째 객체의 아이디와 입력받은 아이디와 같다면
+//         console.log( '[중복] 이미 등록된 아이디입니다.' )
+//         중복체크 = true // 만일 중복이면 중복체크값을 true 대입
+//         break;
+//     } // 주의할점 : 반복문이 끝날때 까지 모든 배열내 객체 조회, 첫번째 객체내 아이디가 같지 않더라도 뒤에 있는 객체가 같을 수 있다.
+// } // for end // 반복문 종료되고
+// if( 중복체크 == true){console.log('이미 사용중인 아이디 입니다.');}
+// else{console.log('등록했습니다.'); members.push(member); }
 
 /*문제 3: 객체 배열의 속성 값 평균 구하기
 scores 배열에 담긴 모든 학생의 수학(math) 점수 평균을 계산하여 콘솔에 출력하시오.
@@ -139,3 +139,4 @@ let response = {}
 6. 인증키 설정 후 'API 목록' 에서 [Open Api 호출] 합니다.
 7. **실행 결과(JSON)**를 전체 복사합니다. 
 */
+
