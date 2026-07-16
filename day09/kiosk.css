@@ -1,4 +1,48 @@
 *{border: blue solid 1px;}
+
+.상단{
+     height: 35px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(109, 98, 139);
+    color: white;
+    font-size: 12px;
+}
+span{
+    border-left: solid 1px black;
+}
+
+.홈{
+    font-size: 25px;
+}
+
+.메뉴명{
+     width: 180px;
+    text-align: center;
+}
+.수량{
+    width: 80px;
+    text-align: center;
+}
+.가격{
+    width: 180px;
+    text-align: center;
+}
+.주문목록{
+
+}
+
+.취소{
+
+}
+.아아{
+    width: 130px;
+}
+.bu{
+    height: 30px;
+    width: 35px;
+}
+
 h2{
       margin: 0;
     padding: 10px;
@@ -7,7 +51,7 @@ h3{
     margin: 0;
     height: 35px;
 
-    background-color: #6d628b;
+    background-color: rgb(109, 98, 139);
     color: white;
 
     font-size: 15px;
