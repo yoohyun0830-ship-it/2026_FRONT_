@@ -79,56 +79,92 @@ const students = [
   { name: '박민준', score: 78 }
 ];
 function findTopStudent(){
-
+  let top = students[0];
+  for(let i = 1; i < students.length; i++){
+    if(top.score<students[i].score){
+      top = students[i];
+    }
+  }
+  return top.name;
 }
-
+console.log(findTopStudent())
 
 /*실습 6: 상품 목록 페이지 만들기
-
 전역변수 products 배열 데이터를 이용하여, 
 각 상품을 소개하는 HTML 요소를 동적으로 만들어 
 페이지에 표시하는 renderProducts 함수를 만드세요.
 각 상품은 이름(<h4>), 가격(<p>), 재고(<p>)를 포함한 div로 묶여야 합니다.
 */
 const products = [
-
   { name: '노트북', price: 1200000, stock: 5 },
-
   { name: '모니터', price: 350000, stock: 12 },
-
   { name: '키보드', price: 80000, stock: 25 }
-
 ];
+function renderProducts(){
+  let html = ' '
+  for( let i = 0 ;i<products.length ;i++ ){
+    html += `<div>
+                  <h4>이름:${products[i].name}</h4>
+                  <p>가격:${products[i].price}원</p>
+                  <p>재고:${products[i].stock}개</p>
+             <div/>`
+  }
+  document.querySelector("#productBox").innerHTML = html;
+}
+  renderProducts()
 
 
 /*실습 7: 간단한 계산기
-
 num1, num2, operator ( '+', '-') 세 개의 매개변수를 받는 calculator 함수를 만드시오.
-
 operator가 '+'이면 두 수의 합을, '-'이면 두 수의 차를 콘솔에 출력하시오. (if문 사용)*/
-
+function calculator (num1 , num2 , operator){
+  if(operator == '+'){
+    result=num1+num2;
+  }
+  else if(operator == '-'){
+    result=num1-num2;
+  }
+  return result;
+}
+console.log(calculator(10,5,'+'));
+console.log(calculator(10,5,'-'));
 
 
 /*실습 8: HTML 리스트(ul, li) 동적 생성
-
 todoList라는 할 일 목록이 담긴 전역 배열이 있습니다.
-
-renderList() 함수를 정의하시오. 이 함수는 todoList 배열을 순회하며 <li>할 일 내용</li> 형태의 HTML 문자열을 만듭니다.
-
+renderList() 함수를 정의하시오. 이 함수는 todoList 배열을 순회하며 
+<li>할 일 내용</li> 형태의 HTML 문자열을 만듭니다.
 최종적으로 이 문자열을 HTML <ul> 태그로 표현하여 리스트를 화면에 그리시오.
-
-let todoList = ['장보기', '운동하기']*/
-
+*/
+let todoList = ['장보기', '운동하기']
+function renderList(){
+  let html = ' '
+  for( let i=0 ; i<todoList.length ; i++){
+    html += `<li>${todoList[i]}</li>`
+  }
+  document.querySelector("#listBox").innerHTML = `<ul>${html}</ul>`;
+}
+renderList();
 
 /*실습 9: 입장료 계산 함수
-
 임의의 나이(age)를 매개변수로 받아 입장료를 반환하는 getTicketPrice 함수를 만드시오.
-
 8세 미만: "무료"
-
 8세 이상 19세 이하: "5,000원"
-
 20세 이상: "10,000원"
-
 계산된 가격 문자열을 반환(return)하시오.*/
-
+function getTicketPrice(age){
+  let result = ''
+  if(age>=20){
+    result = '10,000원'
+  }
+  else if(age<=19 && 8<=age ){
+    result = '5,000원'
+  }
+  else{
+    result = '무료'
+  }
+  return result
+}
+console.log(getTicketPrice(7))
+console.log(getTicketPrice(19))
+console.log(getTicketPrice(23))
