@@ -1,34 +1,44 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.theStudio{
+    color: blue;
+}
+
+.top-menu{
+    font-size: 10px;
+    color: gray;
+    text-decoration: none;
+    margin: 4px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.mainImgBox{
+    display: flex;
+    justify-content: center;
+}
+.mainImgBox > .mainImg{
+    width: 70%;
 }
 
 #main{
     width: 100%;
 }
 
-.main-img{
-    width: 900px;
-    margin: 0 auto;
-}
-
-.main-img img{
-    width: 100%;
-    display: block;
-}
 
 .icon-box{
-    width: 750px;
-    margin: 20px auto;
     display: flex;
+    margin: 20px;
     justify-content: center;
 }
 
 .icon{
     width: 300px;
     display: flex;
-    margin: 0 20px;
+    align-items: center;
+    margin: 0 30px;
 }
 
 .icon img{
@@ -71,4 +81,63 @@
 
 .photo p{
     font-size: 9px;
+}
+
+
+
+#footer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 35px 0;
+    background-color: #333;
+    color: #cccccc;
+}
+
+.footer-inner {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 왼쪽(회사 정보) */
+.footer-left h2 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 22px;
+}
+
+.footer-left p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* 저작권 */
+.copyright {
+    margin-top: 15px;
+    color: #888888;
+    font-size: 12px;
+}
+
+/* SNS 이미지 전체 영역 */
+.sns {
+    display: flex;
+    align-items: center;
+    gap : 15px
+}
+
+/* SNS 링크 영역 */
+.sns a {
+    text-decoration: none;
+    width: 40px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+/* SNS 이미지 크기 */
+.sns img {
+    width: 200%;
+    height: 40px;
+    display: block;
 }
