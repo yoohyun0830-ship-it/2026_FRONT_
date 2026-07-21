@@ -1,5 +1,5 @@
 /*문제 1: prompt로 제품 정보 객체 만들기*/
-/*
+
 let 제품명 = prompt( '제품명 입력 ') // 1. 입력받고 2.저장하기
 let 가격 = prompt( '가격 입력 ')
 let 제조사 = prompt( '제조사 입력 ')
@@ -8,9 +8,9 @@ let product = { 제품명 , 가격 , 제조사 } // vs { '제품명' : 제품명
 // 입력받은 제품명이 저장된 변수를 객체내 속성값으로 구성 // 모든 자료들은 변수/상수 저장 가능
 // ++ 만일 속성명 과 속성값의 변수명이 같다면 , 속성명 생략 가능!
 console.log( product )
-*/
+
 /*문제 2: prompt로 회원 가입 및 아이디 중복 확인 기능 구현*/
-/*
+
 const members = [{ id: 'user1', password: 'pass1', name: '사용자1' },{ id: 'user2', password: 'pass2', name: '사용자2' } ];
 let 아이디 = prompt( '아이디 입력 ')
 let 비밀번호 = prompt( '비밀번호 입력 ')
@@ -29,10 +29,10 @@ for( let index = 0 ; index <= members.length - 1 ; index++ ){ //
 if( 중복체크 == true ){ console.log('이미 사용중인 아이디 입니다.'); }
 else{ console.log('등록했습니다.'); members.push( member ); }
 console.log( members )
-*/
+
 
 /*문제 3: 객체 배열의 속성 값 평균 구하기, scores 배열에 담긴 모든 학생의 수학(math) 점수 평균을 계산하여 콘솔에 출력하시오. */
-/*
+
 const scores = [{ name: 'A', math: 80, science: 92 },{ name: 'B', math: 95, science: 88 },{ name: 'C', math: 76, science: 78 }];
 let 총점수 = 0;
 for( let index = 0 ; index <= scores.length - 1 ; index++ ){ // ++ 반복문은 배열내 모든 자료들을 하나씩 순회/조회
@@ -41,7 +41,7 @@ for( let index = 0 ; index <= scores.length - 1 ; index++ ){ // ++ 반복문은 
     총점수 += 점수.math // 점수객체내 math 속성값을 총점수에 더한다.
 }
 console.log( 총점수 / scores.length ) // 배열.length : 배열내 자료개수 반환 
-*/
+
 /*문제 4: 특정 조건을 만족하는 객체 찾기 */
 /*
 // products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘솔에 출력하시오. 일치하는 객체가 없으면 "상품을 찾을 수 없습니다."를 출력합니다.
