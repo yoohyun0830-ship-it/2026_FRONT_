@@ -13,16 +13,23 @@ let staff = [
 
 // [1] 전체조회
 teamPrint();
+
 function teamPrint(){
 
     let tbody = document.querySelector('.col-left table tbody');
+
     let html = '';
+
     for(let index = 0; index <= team.length - 1; index++){
+
         let teamObject = team[index];
+
         html += `
             <tr>
                 <td>${teamObject.tname}</td>
+
                 <td class="action-links align-right">
+
                     <a href="#" class="link-edit"
                        onclick="teamUpdate(${teamObject.tcode})">
                         수정
@@ -54,10 +61,15 @@ function teamDelete(tcode){
 
     // 삭제
     for(let index = 0 ; index <= team.length-1 ; index++){
+
         if(team[index].tcode == tcode){
+
             team.splice(index,1);
+
             alert('삭제 성공');
+
             teamPrint();
+
             return;
         }
     }
@@ -66,11 +78,17 @@ function teamDelete(tcode){
 
 // [3] 수정
 function teamUpdate(tcode){
+
     for(let index = 0 ; index <= team.length-1 ; index++){
+
         if(team[index].tcode == tcode){
+
             let newTname = prompt('수정할 부서명을 입력하세요.');
+
             team[index].tname = newTname;
+
             teamPrint();
+
             return;
         }
     }
@@ -79,14 +97,18 @@ function teamUpdate(tcode){
 
 // [4] 등록
 let finalTcode = 3;
+
 function teamAdd(){
+
     let tname = document.querySelector('.teamName').value;
+
     if(tname == ''){
         alert('부서명을 입력하세요.');
         return;
     }
 
     for(let index = 0 ; index <= team.length-1 ; index++){
+
         if(team[index].tname == tname){
             alert('이미 존재하는 부서입니다.');
             return;
@@ -99,7 +121,10 @@ function teamAdd(){
     };
 
     team.push(object);
+
     finalTcode += 1;
+
     alert('등록 성공');
+
     teamPrint();
 }
