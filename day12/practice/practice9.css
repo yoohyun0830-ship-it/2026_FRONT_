@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #eef3f7;
+
+    color: #12233f;
+    font-family:
+        "Pretendard",
+        "Noto Sans KR",
+        Arial,
+        sans-serif;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+#wrap {
+    width: 100%;
+    max-width: 430px;
+
+    margin: 0 auto;
+    padding: 14px 10px 40px;
+}
+
+.card {
+    margin-bottom: 38px;
+    padding: 32px 30px;
+
+    background-color: #ffffff;
+    border-radius: 16px;
+}
+
+.cardTitle {
+    margin: 0 0 26px;
+
+    color: #10213d;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.formGroup {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #243653;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* select 및 input 공통 */
+
+.staffSelect,
+.startDate,
+.endDate,
+.reason {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    background-color: #ffffff;
+    border: 1px solid #d5dfeb;
+    border-radius: 8px;
+    outline: none;
+
+    color: #394a64;
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.staffSelect:focus,
+.startDate:focus,
+.endDate:focus,
+.reason:focus {
+    border-color: #169c8b;
+    box-shadow: 0 0 0 3px rgba(22, 156, 139, 0.12);
+}
+
+.staffSelect {
+    appearance: auto;
+    cursor: pointer;
+}
+
+.dateArea {
+    display: flex;
+    gap: 15px;
+}
+
+.dateArea .formGroup {
+    width: calc(50% - 7.5px);
+}
+
+.reason::placeholder {
+    color: #9baabc;
+}
+
+
+.submitArea {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: -2px;
+}
+
+.submitBtn {
+    min-width: 70px;
+    height: 47px;
+
+    padding: 0 18px;
+
+    background-color: #119985;
+    border: none;
+    border-radius: 8px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.1s;
+}
+
+.submitBtn:hover {
+    background-color: #0d8876;
+}
+
+.submitBtn:active {
+    transform: scale(0.97);
+}
+
+#vacationList {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* JavaScript에서 생성하는 휴가 항목 */
+
+.vacationItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+
+    width: 100%;
+    min-height: 112px;
+
+    padding: 19px 18px;
+
+    background-color: #f8fafc;
+    border: 1px solid #d7e1ec;
+    border-radius: 10px;
+}
+
+.vacationContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.vacationContent h3 {
+    margin: 0 0 8px;
+
+    color: #10213d;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.vacationContent p {
+    margin: 0 0 6px;
+
+    color: #40516c;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.vacationContent p:last-child {
+    margin-bottom: 0;
+
+    color: #8b9bb0;
+}
+
+.vacationButtonArea {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+/* 수정 버튼 */
+
+.updateBtn {
+    height: 31px;
+
+    padding: 0 10px;
+
+    background-color: #119985;
+    border: none;
+    border-radius: 5px;
+
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.updateBtn:hover {
+    background-color: #0d8876;
+}
+
+.cancelBtn {
+    height: 31px;
+
+    padding: 0 10px;
+
+    background-color: #9aaac0;
+    border: none;
+    border-radius: 5px;
+
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.cancelBtn:hover {
+    background-color: #7f91aa;
+}
+
+.emptyMessage {
+    padding: 35px 15px;
+
+    background-color: #f8fafc;
+    border: 1px solid #d7e1ec;
+    border-radius: 10px;
+
+    color: #8b9bb0;
+    font-size: 14px;
+    text-align: center;
+}

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="practice9.css">
   <title>인사 관리 대시보드</title>
   <style>
     * {
@@ -279,7 +280,7 @@
   <!-- 헤더 영역 -->
   <header>
     <h1>인사 관리 대시보드</h1>
-    <p>부서, 사원, 휴가 통합 관리 시스템</p>
+    <p>부서, 사원, 휴가 통합 관리 시  스템</p>
   </header>
 
   <!-- 대시보드 메인 레이아웃 -->
@@ -290,13 +291,10 @@
       <div class="card">
         <h2 class="card-title">부서 관리</h2>
         <div class="dept-input-group">
-          <input type="text" class="teamName"
-        placeholder="신규 부서명 입력"> <!--onclick 추가함-->
-          <button type="button" class="btn btn-purple"
-        onclick="teamAdd()">추가</button>
-
+          <input type="text" placeholder="신규 부서명 입력" class="teamName">
+          <button type="button" class="btn btn-purple" onclick="teamAdd()">추가</button>
         </div>
-
+        
         <table>
           <thead>
             <tr>
@@ -340,38 +338,43 @@
           <div class="input-row">
             <div class="form-group">
               <label>이름</label>
-              <input type="text">
+              <input type="text" class="name">
             </div>
             <div class="form-group">
               <label>직급</label>
-              <input type="text">
+              <select class="position">
+                <option disabled selected hidden value="disabled">직급을 선택하세요</option>
+                <option value="1">선임 개발자</option>
+                <option value="2">수석 디자이너</option>
+                <option value="3">팀장</option>
+              </select>
             </div>
           </div>
 
           <div class="input-row">
             <div class="form-group">
               <label>부서</label>
-              <select>
-                <option disabled selected hidden>부서를 선택하세요</option>
-                <option>개발팀</option>
-                <option>디자인팀</option>
-                <option>기획팀</option>
+              <select class="team">
+                <option disabled selected hidden value="disabled">부서를 선택하세요</option>
+                <option value="1">개발팀</option>
+                <option value="2">디자인팀</option>
+                <option value="3">기획팀</option>
               </select>
             </div>
             <div class="form-group">
               <label>사진</label>
-              <input type="file">
+              <input type="file" class="image">
             </div>
           </div>
 
           <div class="btn-right-align">
-            <button type="button" class="btn btn-purple">등록</button>
+            <button type="button" class="btn btn-purple" onclick="staffAdd()">등록</button>
           </div>
         </form>
       </div>
 
       <!-- 사원 전체 목록 카드 -->
-      <div class="card sub-section">
+      <div class="card-sub-section">
         <h2 class="card-title">사원 전체 목록</h2>
         <table class="employee-table">
           <thead>
@@ -419,65 +422,84 @@
       </div>
     </section>
 
-    <!-- 3열: 사원 휴가 신청 및 전체 목록 -->
-    <section class="col-right">
-      <!-- 휴가 신청 카드 -->
-      <div class="card">
-        <h2 class="card-title">사원 휴가 신청</h2>
-        <form>
-          <div class="form-group">
-            <label>신청 사원</label>
-            <select>
-              <option disabled selected hidden>휴가 신청 사원을 선택하세요</option>
-              <option>김민준</option>
-              <option>이서연</option>
-              <option>박도윤</option>
-            </select>
-          </div>
+    <div id="wrap">
 
-          <div class="input-row">
-            <div class="form-group">
-              <label>휴가 시작일</label>
-              <input type="date">
+        <section id="vacationHeader" class="card">
+
+            <h3 class="cardTitle">사원 휴가 신청</h3>
+
+            <!-- 신청 사원 -->
+            <div class="formGroup">
+                <label for="staffSelect">신청 사원</label>
+
+                <select
+                    id="staffSelect"
+                    class="staffSelect"
+                >
+                    <option value="disabled" selected disabled>
+                        휴가 신청 사원을 선택하세요
+                    </option>
+                </select>
             </div>
-            <div class="form-group">
-              <label>휴가 종료일</label>
-              <input type="date">
+
+            <div class="dateArea">
+
+                <div class="formGroup">
+                    <label for="startDate">휴가 시작일</label>
+
+                    <input
+                        type="date"
+                        id="startDate"
+                        class="startDate"
+                    >
+                </div>
+
+                <div class="formGroup">
+                    <label for="endDate">휴가 종료일</label>
+
+                    <input
+                        type="date"
+                        id="endDate"
+                        class="endDate"
+                    >
+                </div>
+
             </div>
-          </div>
 
-          <div class="form-group">
-            <label>휴가 사유</label>
-            <input type="text" placeholder="예: 여름 휴가">
-          </div>
+            <div class="formGroup">
+                <label for="reason">휴가 사유</label>
 
-          <div class="btn-right-align">
-            <button type="button" class="btn btn-teal">신청</button>
-          </div>
-        </form>
-      </div>
+                <input
+                    type="text"
+                    id="reason"
+                    class="reason"
+                    placeholder="예: 여름 휴가"
+                    maxlength="100"
+                >
+            </div>
 
-      <!-- 휴가 신청 전체 목록 카드 -->
-      <div class="card sub-section">
-        <h2 class="card-title">휴가 신청 전체 목록</h2>
-        
-        <div class="vacation-card">
-          <div class="user-name">김민준</div>
-          <div class="date">2025-08-04 ~ 2025-08-04</div>
-          <div class="reason">사유: 병원 진료</div>
-          <button type="button" class="btn-cancel">신청취소</button>
-        </div>
+            <div class="submitArea">
+                <button
+                    type="button"
+                    class="submitBtn"
+                    onclick="vacationAdd()"
+                >
+                    신청
+                </button>
+            </div>
 
-        <div class="vacation-card">
-          <div class="user-name">이서연</div>
-          <div class="date">2025-07-21 ~ 2025-07-25</div>
-          <div class="reason">사유: 여름 휴가</div>
-          <button type="button" class="btn-cancel">신청취소</button>
-        </div>
-      </div>
-    </section>
+        </section>
 
-  </div>
+        <section id="vacationMain" class="card">
+
+            <h3 class="cardTitle">휴가 신청 전체 목록</h3>
+
+            <!-- JS에서 휴가 신청 내역 출력 -->
+            <div id="vacationList"></div>
+
+        </section>
+
+    </div>
 <script src="practice9.js"></script>
 </body>
 </html>
