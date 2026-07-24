@@ -1,0 +1,47 @@
+.background {
+    width: 700px;
+    height: 400px;
+    background-color: red;
+}
+
+.box {
+    width: 90px;
+    padding: 10px;
+    background-color: yellow;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.box1 {
+    top: 25px;
+    left: 295px;
+}
+
+
+.second {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+}
+
+.box2,
+.box3 {
+    top: 35px;
+}
+
+.third {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+}
+
+.box4,
+.box5 {
+    top: 100px;
+}
+
+.box6 {
+    top: 115px;
+    left: 295px;
+}

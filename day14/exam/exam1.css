@@ -1,0 +1,40 @@
+.box{
+    width: 100px; height: 100px;
+    background-color: pink;
+    border: 1px solid paleturquoise;
+}
+.box2{  /* 요소 배치/위치 : stactic(기본값) 정적 , 위치변경 불가능 */
+    position: static;
+    left: 50px;
+}
+.box3{
+    position: relative; /* relative 상대 (원래있던자리기준) 위치 */
+    top: 50px; /* top 위에서부터 50px 아래로 이동 */
+    left: 50px; /* left 왼쪽에서부터 50px 오른쪽으로 이동 , 음수이면 왼쪽으로*/
+}
+.box4{
+    position: absolute; /*absolute 절대(가장가까운 position 상위요소) 위치 */
+    top: 50px; left:50px;
+}
+.box5{
+    position: fixed; /* fixed 디바이스(화면) 위치 고정 */
+    bottom: 50px; /* bottom 아래에서부터 50px 위로 이동 ,  음수이면 아래*/
+    right: 50px; /* right 오른쪽에서부터 50px 왼쪽으로 이동 , 음수이면 왼쪽*/
+}
+.parent{
+    position: relative;
+}
+.box6{
+    position: absolute;
+    top: 30px; left: 30;
+}
+.header{
+    display: flex;
+    background-color: skyblue;
+    position: sticky;
+    top: 0px; /* 위쪽 붙이기 */
+    z-index: -1; /* position 사용하는 요소간의 겹침 우선순위 *높을수록 */
+}
+.header>ul{
+    display: flex;
+}
